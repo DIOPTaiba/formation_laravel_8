@@ -38,11 +38,14 @@ use Illuminate\Support\Facades\Route;
 
 // Pour retourner une vue à travers le controlleur
 // Route::get('/articles', 'App\Http\Controllers\PostController@index');
-Route::get('/articles', [PostController::class, 'index']);
+// Route::get('/articles', [PostController::class, 'index']);
 
-Route::get('/', [PostController::class, 'index']);
-Route::get('/posts/{id}', [PostController::class, 'show']);
-Route::get('/contact', [PostController::class, 'contact']);
+// On peut nommé les routes avec ->name('welcome') et mette ce nom dans la navebar
+// Ces noms permettent de pouvoir changer les URLs sans changer les liens au niveau des autres pages
+Route::get('/', [PostController::class, 'index'])->name('welcome');
+// whereNumber permet de vérifier si le paramètre est un nombre et permet de faire des contrôles directement ic
+Route::get('/posts/{id}', [PostController::class, 'show'])->whereNumber('id');
+Route::get('/contact', [PostController::class, 'contact'])->name('contact');
 
 
 
