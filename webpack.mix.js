@@ -16,7 +16,19 @@ const mix = require('laravel-mix');
 // et les fichiers css 'resources/css/app.css' dans 'public/css'
 // Et pour utiliser laravel-mix pour la compilation il faut installer Nodejs
 // Puis faire un npm install pour instakler toutes les dépendances nécessaires
+// mix.js('resources/js/app.js', 'public/js')
+//     .postCss('resources/css/app.css', 'public/css', [
+//         //
+//     ]);
+
+// On peut changer les fichiers css en scss en modifiant le postCss en sass
+// mix.js('resources/js/app.js', 'public/js')
+//     .sass('resources/scss/app.scss', 'public/css', [
+//         //
+//     ]);
+
+// Pour utilise Tailwind CSS on utiliser les fichiers css
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
-        //
+        require('tailwindcss'),
     ]);

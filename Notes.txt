@@ -1,0 +1,17 @@
+-   Laravel-mix permet de compiler les fichiers js, css et scss en des fichier minifiés en       utilisant webpack
+-   Pour utiliser Laravel-mix il faut installer npm et node
+-   Ensuite faire un npm install pour installer toutes les dépendances réquises
+-   Ensuite faire un npm run dev pour lancer la compilation des fichiers cs, js et scss à chaque modification de ces fichiers
+
+-   Pour ne pas répéter npm run dev on peut utiliser npm run watch qui écoute les changements et les applique automatiquement
+
+-   Tailwind CSS est un framework css
+- installation : npm install // pour les dépendances
+                 npm install -D tailwindcss // pour l'installation de Tailwind CSS
+                 npx tailwindcss init // La commande init va générer un fichier
+                    tailwind.config.js
+            * Après suivre les instructions dans la documentation
+            puis refaire un npm run dev pour compiler et générer du CSS de Tainlind CSS dans app.css et maintenant pouvoir utiliser les classes de Tailwnind CSS dans notre application
+    
+-   Création des models:
+        php artisan make:model Post -m // l'option -m permet de créer un model et une migration (table)
