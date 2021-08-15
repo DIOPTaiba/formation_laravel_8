@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -26,12 +27,18 @@ class PostController extends Controller
         // ]);
 
         // Si on a des données qui viennent de la base de données par exemple
-        $posts = [
-            'Mon titre N°1',
-            'Mon titre N°2',
-        ];
+        // $posts = [
+        //     'Mon titre N°1',
+        //     'Mon titre N°2',
+        // ];
+        // return view('articles', compact('posts'));
+        
+        // On utilise Eloquent pour interagir avec la db
+        
+        $posts = Post::all();
+        // dd($posts);
+        
         return view('articles', compact('posts'));
-
         
     }
 
