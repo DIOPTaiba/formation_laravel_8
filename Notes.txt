@@ -17,3 +17,11 @@
         php artisan make:model Post -m // l'option -m permet de créer un model et une migration (table)
 -   Généreration les tables:
         php artisan migrate
+
+-   Les Factoties : une libraitie pour générer de fausses données à inscrire dans la base
+-   Création d'une Fatory :
+        php artisan make:factory PostFactory --model=Post  // pour dir que la factory est pour le model Post
+
+-   Pour générer la factory on peut utiliser : php artisan tinker qui ouvre CLI où on peut taper
+    du php    
+    >>> Post::factory()->count(10)->create(); // cette commande nous créera 10 post
