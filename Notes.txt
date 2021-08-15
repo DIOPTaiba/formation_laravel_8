@@ -15,3 +15,5 @@
     
 -   Création des models:
         php artisan make:model Post -m // l'option -m permet de créer un model et une migration (table)
+-   Généreration les tables:
+        php artisan migrate
